@@ -3,7 +3,10 @@ module.exports = function (api) {
   return {
     presets: ["babel-preset-expo"],
     plugins: [
-      ["babel-plugin-react-docgen-typescript", { exclude: "node_modules" }],
-    ],
+      process.env.STORYBOOK_ENABLED
+        ? ["babel-plugin-react-docgen-typescript", { exclude: "node_modules" }]
+        : null,
+      "react-native-reanimated/plugin",
+    ].filter(Boolean),
   };
 };
