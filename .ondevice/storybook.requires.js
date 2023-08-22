@@ -47,10 +47,12 @@ try {
   argsEnhancers.forEach((enhancer) => addArgsEnhancer(enhancer));
 } catch {}
 
-const getStories = () => {
-  return {
-    "./components/Button/Button.stories.tsx": require("../components/Button/Button.stories.tsx"),
-  };
-};
+const stories = [
+  require.context(
+    "../components",
+    true,
+    /^\.(?:(?:^|\/|(?:(?:(?!(?:^|\/)\.).)*?)\/)(?!\.)(?=.)[^/]*?\.stories\.(?:ts|tsx|js|jsx)?)$/
+  ),
+];
 
-configure(getStories, module, false);
+configure(stories, module, false);
