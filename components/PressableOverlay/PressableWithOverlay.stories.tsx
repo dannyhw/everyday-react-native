@@ -46,6 +46,16 @@ export const OverlayCardExample: PressableWithOverlayStory = {
       );
     },
   ],
+  args: {
+    ...CardExample.args,
+    style: {
+      backgroundColor: "white",
+      padding: 16,
+      width: 300,
+      height: 300,
+      borderRadius: 8,
+    },
+  },
   ...CardExample,
 };
 
