@@ -1,7 +1,7 @@
 export default ({ config }) => ({
   ...config,
   name: "everydayreactnative",
-  slug: "expo-template-blank-typescript",
+  slug: "everyday-react-native",
   version: "1.0.0",
   orientation: "portrait",
   icon: "./assets/icon.png",
