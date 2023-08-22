@@ -24,6 +24,28 @@ export const OverlayBasic: PressableWithOverlayStory = {
 };
 
 export const OverlayCardExample: PressableWithOverlayStory = {
+  decorators: [
+    (Story) => {
+      return (
+        <View
+          // since the overlay has overflow hidden we can't apply shadow to it directly
+          style={{
+            shadowColor: "#000",
+            shadowOffset: {
+              width: 0,
+              height: 2,
+            },
+            shadowOpacity: 0.23,
+            shadowRadius: 2.62,
+            elevation: 4,
+            borderRadius: 8,
+          }}
+        >
+          <Story />
+        </View>
+      );
+    },
+  ],
   ...CardExample,
 };
 

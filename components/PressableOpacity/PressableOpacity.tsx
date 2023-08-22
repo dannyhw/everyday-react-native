@@ -36,9 +36,9 @@ export const PressableOpacity = ({
       if (Platform.OS === "web") {
         setTimeout(() => {
           opacity.value = withSpring(1);
-        }, 200);
+        }, 250);
       } else {
-        opacity.value = withDelay(200, withSpring(1));
+        opacity.value = withDelay(250, withSpring(1));
       }
     } else {
       opacity.value = withSpring(1);

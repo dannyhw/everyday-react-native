@@ -40,9 +40,9 @@ export const PressableWithOverlay = ({
       if (Platform.OS === "web") {
         setTimeout(() => {
           opacity.value = withSpring(0);
-        }, 200);
+        }, 250);
       } else {
-        opacity.value = withDelay(200, withSpring(0));
+        opacity.value = withDelay(250, withSpring(0));
       }
     } else {
       opacity.value = withSpring(0);
