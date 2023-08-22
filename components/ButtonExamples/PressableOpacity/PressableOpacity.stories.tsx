@@ -1,11 +1,11 @@
 import { Meta } from "@storybook/react";
-
-import { PressableOpacity } from "./PressableOpacity";
 import { StoryObj } from "@storybook/react-native";
 import { Text, View } from "react-native";
+import { PressableOpacity } from "./PressableOpacity";
 
+// of course you can just use TouchableOpacity, but this example is a really easy one to show how you can use reanimated to create a custom button
 const PressableOpacityMeta: Meta<typeof PressableOpacity> = {
-  title: "PressableOpacity",
+  title: "Buttons/PressableOpacity",
   component: PressableOpacity,
   argTypes: {
     onPress: { action: "onPress" },

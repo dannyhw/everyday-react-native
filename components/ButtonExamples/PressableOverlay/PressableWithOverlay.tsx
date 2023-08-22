@@ -1,11 +1,8 @@
 import {
-  Pressable as RNPressable,
-  StyleSheet,
-  PressableProps,
   GestureResponderEvent,
   Platform,
-  ViewStyle,
-  StyleProp,
+  Pressable as RNPressable,
+  StyleSheet,
 } from "react-native";
 import Animated, {
   useSharedValue,

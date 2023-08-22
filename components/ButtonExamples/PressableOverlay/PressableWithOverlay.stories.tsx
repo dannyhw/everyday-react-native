@@ -1,15 +1,15 @@
-import React from "react";
 import { ComponentMeta, StoryObj } from "@storybook/react-native";
-import { PressableWithOverlay } from "./PressableWithOverlay";
+import React from "react";
+import { View } from "react-native";
 import PressableOpacityStoriesMeta, {
   Basic,
   CardExample,
   LinkExample,
 } from "../PressableOpacity/PressableOpacity.stories";
-import { Text, View } from "react-native";
+import { PressableWithOverlay } from "./PressableWithOverlay";
 
 const PressableWithOverlayMeta: ComponentMeta<typeof PressableWithOverlay> = {
-  title: "PressableWithOverlay",
+  title: "Buttons/PressableWithOverlay",
   component: PressableWithOverlay,
   argTypes: PressableOpacityStoriesMeta.argTypes,
   decorators: PressableOpacityStoriesMeta.decorators,

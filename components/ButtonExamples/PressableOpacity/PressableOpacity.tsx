@@ -2,14 +2,13 @@ import {
   GestureResponderEvent,
   Platform,
   Pressable as RNPressable,
-  Text,
 } from "react-native";
-import { ButtonProps } from "../button-types";
 import Animated, {
   useSharedValue,
   withDelay,
   withSpring,
 } from "react-native-reanimated";
+import { ButtonProps } from "../button-types";
 
 const Pressable = Animated.createAnimatedComponent(RNPressable);
 
