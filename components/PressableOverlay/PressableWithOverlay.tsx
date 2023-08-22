@@ -12,7 +12,7 @@ import Animated, {
   withDelay,
   withSpring,
 } from "react-native-reanimated";
-import { ButtonProps } from "../buttonProps";
+import { ButtonProps } from "../button-types";
 
 const Pressable = Animated.createAnimatedComponent(RNPressable);
 
@@ -40,9 +40,9 @@ export const PressableWithOverlay = ({
       if (Platform.OS === "web") {
         setTimeout(() => {
           opacity.value = withSpring(0);
-        }, 300);
+        }, 200);
       } else {
-        opacity.value = withDelay(300, withSpring(0));
+        opacity.value = withDelay(200, withSpring(0));
       }
     } else {
       opacity.value = withSpring(0);
