@@ -58,6 +58,7 @@ export const PressableWithOverlay = ({
       {...props}
     >
       {children}
+
       <Animated.View
         style={{
           backgroundColor: "rgba(0, 0, 0, 0.50)",

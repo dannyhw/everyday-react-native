@@ -44,6 +44,7 @@ export const PressableOpacity = ({
       opacity.value = withSpring(1);
     }
   };
+
   return (
     <Pressable
       style={[{ opacity }, style]}
