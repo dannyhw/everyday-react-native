@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 function App() {
   return (
@@ -12,7 +13,15 @@ function App() {
 let AppEntryPoint = App;
 
 if (Constants.expoConfig?.extra?.storybookEnabled === "true") {
-  AppEntryPoint = require("./.ondevice").default;
+  const Storybook = require("./.ondevice").default;
+
+  AppEntryPoint = () => {
+    return (
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <Storybook />
+      </GestureHandlerRootView>
+    );
+  };
 }
 
 const styles = StyleSheet.create({
